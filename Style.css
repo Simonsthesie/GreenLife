@@ -1,0 +1,225 @@
+/* Styles généraux pour mobil-first */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #ffffff;
+}
+
+header {
+  position: relative;
+  background-color: #228b22;
+  color: #fff;
+  padding: 20px;
+  margin: 0;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header h2 {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  margin-right: 250px;
+} 
+
+header .logo-image {
+  position: absolute;
+  top:0;
+  right:0;
+  max-height: 100px;
+  margin-right: 10px;
+}
+
+ nav {
+      background-color: #228b22;
+      overflow: hidden;
+      top: 100px;
+}
+    
+nav ul {
+  list-style-type: none;
+  display:inline-flex ;
+}
+
+nav li a {
+  display: inline-block;
+  color: #ffffff; /* couleur des liens */
+  padding: 14px 16px; /* espacement autour des liens */
+  text-decoration: none;
+}
+
+nav li:hover {
+  background-color: #3e8e41;
+}
+
+nav li a:hover {
+  background-color: #3e8e41; /* couleur de fond au survol */
+}
+
+nav .dropdown-content {
+  display: none ;
+  position: absolute;
+  min-width: 160px;
+  background-color: #4CAF50;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+}
+
+nav .dropdown-content a {
+  color: black;
+  padding: 6px 8px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+nav .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+nav li {
+  margin-bottom: 10px;
+}
+
+main {
+  padding: 20px;
+}
+
+article {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+article h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+article p {
+  margin-bottom: 20px;
+}
+
+article a {
+  display: inline-block;
+  background-color: #228b22;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+article a:hover {
+  background-color: #006400;
+}
+form {
+  background-color: #f8f8f8;
+  border: 1px solid #e2e2e2;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+input[type="submit"]:focus {
+  outline: none;
+}
+
+.error {
+  color: red;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+/* Media queries pour les écrans plus grands */
+@media (min-width: 768px) { 
+
+  header .logo-image {
+    float: right;
+    max-height: 200px;
+    margin-right: 10px;
+  }   
+  
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  article {
+    flex: 1 1 300px;
+    margin: 10px;
+  }
+}
+
+ 
+/* Media queries pour les écrans plus petits */
+@media only screen and (max-width: 767px) {
+
+.logo-image {
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.logo-text {
+  display: none;
+}
+
+.text{
+   display: none;
+}
+}
